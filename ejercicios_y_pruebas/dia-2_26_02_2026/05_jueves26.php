@@ -27,6 +27,4 @@ echo "<hr>";
 
 define("CIUDAD", "Sevilla");
 echo CIUDAD;
-
-define()
 ?>
