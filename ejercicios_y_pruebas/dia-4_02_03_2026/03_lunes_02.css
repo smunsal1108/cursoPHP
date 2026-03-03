@@ -1,6 +1,7 @@
 table {
     border-collapse: collapse;
     width: 80%;
+    /* color: red; */
 }
 
 th,
@@ -13,3 +14,4 @@ td {
 th {
     background-color: #ddd;
 }
+
