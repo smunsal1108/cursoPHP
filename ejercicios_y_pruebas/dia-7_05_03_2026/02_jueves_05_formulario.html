@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <h1>Formulario inicial</h1>
+    <form action="02_jueves_05_formulario.php" method="post">
+        <div>
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre" required maxlength="10" placeholder="Escribe tu nombre"> <!-- Con maxlength, puedes limitar el máximo de caracteres que se puede escribir -->
+        </div>
+        <div>
+            <label for="apellidos">Apellidos</label>
+            <input type="text" name="apellidos" id="apellidos">
+        </div>
+        <div>
+            <label for="clave">Clave</label>
+            <input type="password" name="clave" id="clave" required> <!-- Con required, obligas al usuario a rellenar ese campo si o si -->
+        </div>
+        <div>
+            <label for="fecha">Fecha</label>
+            <input type="date" name="fecha" id="fecha">
+        </div>
+        <div>
+            <label for="fichero">Fichero</label> 
+            <input type="file" name="fichero" id="fichero"> <!-- De esta forma solo puedes incluir un único fichero -->
+        </div>
+        <div>
+            <label for="ficheros">Ficheros</label> 
+            <input type="file" name="ficheros[]" id="ficheros" multiple> <!-- Si queremos multiples archivos, tenemos que añadir [] al parametro "name=ficheros" y tenemos que añadir si o si la función "multiple". Si no añadimos los [] en el parámetro, solo enviará el último -->
+        </div>
+        <div>
+            <label for="marcas">Marcas</label>
+            <select name="marcas[]" id="marcas" multiple> <!-- multiple también se puede colocar en la etiqueta <select> -->
+                <option disabled selected>Elegir una marca</option>
+                <option value="SEAT">SEAT</option>
+                <option value="FIAT">FIAT</option>
+                <option value="Mercedes">MERCEDES-BENZ</option>
+                <option value="FORD">FORD</option>
+            </select>
+        </div>
+        <div>
+            <label for="color">Color</label> 
+            <input type="color" name="color" id="color">
+        </div>
+        <div>
+            <input type="radio" value="Sevilla" name="ciudad" id="Sevilla">
+            <label for="Sevilla">Sevilla</label>
+            <input type="radio" value="Málaga" name="ciudad" id="Málaga">
+            <label for="Málaga">Málaga</label>
+            <input type="radio" value="Cordoba" name="ciudad" id="Cordoba">
+            <label for="Cordoba">Cordoba</label>
+        </div>
+        
+        <div>
+            <input type="checkbox" value="Nervión" name="distritos[]" id="Nervión"> <!-- En el input del checkbox también deberás de añadir los [] para poder enviar multiples respuestas -->
+            <label for="Nervión">Nervión</label>
+            <input type="checkbox" value="Macarena" name="distritos[]" id="Macarena">
+            <label for="Macarena">Macarena</label>
+            <input type="checkbox" value="Cerro-Amate" name="distritos[]" id="Cerro-Amate">
+            <label for="Cerro-Amate">Cerro-Amate</label>
+            <input type="checkbox" value="Triana" name="distritos[]" id="Triana">
+            <label for="Triana">Triana</label>
+        </div>
+        
+        <div>
+            <label for="observaciones">Observaciones</label>
+            <textarea name="observaciones" id="observaciones" cols="20" rows="5"></textarea>
+        </div>
+        
+        
+        <input type="submit" value="ENVIAR">
+        <input type="reset" value="BORRAR">
+    </form>
+</body>
+</html>

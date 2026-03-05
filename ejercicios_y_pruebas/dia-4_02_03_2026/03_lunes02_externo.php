@@ -24,5 +24,4 @@ function pintar_tabla($registros) {
     }
 }
 
-
 ?>
