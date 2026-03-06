@@ -7,7 +7,11 @@
 </head>
 <body>
     <h1>Formulario inicial</h1>
-    <form action="02_jueves_05_formulario.php" method="post">
+    <form action="02_jueves_05_formulario.php" method="post" enctype="multipart/form-data"> <!-- enctype="multipart/form-data" = Sirve para decirle al navegador como debe de
+        empaquetar los datos de cierto tipos de archivos (como fotos o ficheros) antes de enviarlos al servidor. SIN ESTO AL SERVIDOR NO LE LLEGAN ESOS ARCHIVOS, porque les
+        llegan vacíos -->
+        <input type="hidden" name="opcion" value="1"> <!-- Este input no sale para el usuario, pero a la hora de enviar el formulario, también envia este mismo dato oculto al
+        servidor -->
         <div>
             <label for="nombre">Nombre</label>
             <input type="text" name="nombre" id="nombre" required maxlength="10" placeholder="Escribe tu nombre"> <!-- Con maxlength, puedes limitar el máximo de caracteres que se puede escribir -->

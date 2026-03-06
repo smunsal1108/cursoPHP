@@ -8,6 +8,13 @@ echo "<pre>";
 print_r($_POST);
 echo"</pre>";
 
+echo "<pre>"; 
+print_r($_FILES); //Te muestra todos los datos del fichero (la ruta, el tamaño del fichero, la extensión que tiene, etc). PEEERO, para que nos salga necesitamos dentro de nuestro HTML y dentro de la etiqueta <form action="..." method="post" enctype="multipart/form-data"> <--- TENEMOS QUE AÑADIRLE EL PARAMETRO enctype="multipart/form-data"
+
+// SI VAS A USAR EL PARAMETRO enctype="multipart/form-data" en el formulario HTML y la variable $_FILES en tu fichero .php, entonces ya no te sirve usar esta función --------------> !empty($_POST["fichero"]) ? $fichero = $_POST["fichero"] : $fichero = "No se ha indicado el fichero"; <--- YA QUE SIEMPRE TE VA A MOSTRAR "No se ha indicado el fichero"
+
+echo"</pre>";
+
 //echo "<p>Hola ".$_POST['nombre']."</p>"; // Esto normalmente no se hace, ya que no es práctico.
 
 // Se suele trabajar más comodamente de la siguiente forma
@@ -29,8 +36,12 @@ $_POST["observaciones"] ? $observaciones = $_POST["observaciones"] : $observacio
     /*
     1. String vacio ("");
     2. Valor numérico que valga 0 o 0.0 (si se tratará de un número con decimales)
-    3. 
-    
+    3. Un string con un 0 --> "0"
+    4. Un null 
+    5. Un false
+    6. Un array vacío
+    7. Una variable declarada pero sin valor
+    8. Una variable que no existe
     */
 
 !empty($_POST["nombre"]) ? $nombre = $_POST["nombre"] : $nombre = "No se ha indicado el nombre";
@@ -47,17 +58,17 @@ $color = $_POST["color"]; //Para el tema del color es más peculiar una cuestió
 
 
 $campos =[
-    "nombre"=> $nombre,
-    "apellidos"=> $apellidos,
-    "clave"=> $clave,
-    "fecha"=> $fecha,
-    "fichero" => $fichero,
-    "ficheros"=> $ficheros, //esto es un array
-    "marcas"=> $marcas, //esto es un array
-    "ciudad"=> $ciudad,
-    "distritos"=> $distritos, //esto es un array
-    "color"=> $color,
-    "observaciones"=> $observaciones
+    "nombre"=> htmlspecialchars($nombre),
+    "apellidos"=> htmlspecialchars($apellidos),
+    "clave"=> htmlspecialchars($clave),
+    "fecha"=> htmlspecialchars($fecha),
+    "fichero" => htmlspecialchars($fichero),
+    "ficheros"=> ($ficheros), //esto es un array
+    "marcas"=> ($marcas), //esto es un array
+    "ciudad"=> htmlspecialchars($ciudad),
+    "distritos"=> ($distritos), //esto es un array
+    "color"=> htmlspecialchars($color),
+    "observaciones"=> htmlspecialchars($observaciones)
 ];
 
 echo "<hr>";
