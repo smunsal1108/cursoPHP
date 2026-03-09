@@ -1,0 +1,17 @@
+
+table {
+    border-collapse: collapse;
+    width: 80%;
+}
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+th {
+    background-color: #ddd;
+}
+.numero {
+    text-align:right;
+    color:blue;
+}

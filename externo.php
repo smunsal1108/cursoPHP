@@ -1,24 +1,30 @@
 <?php
     $nombre="Juan";// se emplea como prueba en php1b.php
 
+function invertir_cadena($cadena){
+    $array = mb_str_split($cadena);
+    $array_rev = array_reverse($array);
+    return implode("",$array_rev);
+}
+
 
 function palindromo($texto){
     //echo "<p>$texto</p>";
-    $texto = strtolower($texto); //sara baras
-    //echo "<p>$texto</p>";
-    $texto = str_replace(" ","", $texto);//sarabaras
-   //echo "<p>$texto</p>";
-    $textoInvertido = strrev($texto); // sarabaras
+    $texto = mb_strtolower($texto); //sara baras
+    echo $texto;
+    // Separar letras de sus tildes
+    $texto = Normalizer::normalize($texto, Normalizer::FORM_D);
+
+    // Eliminar todo lo que no sea a-z
+    $texto = preg_replace('/[^a-z]/u', '', $texto);
+
+    $textoInvertido = invertir_cadena($texto); // sarabaras
    // echo "<p>$textoInvertido</p>";
     if ($texto==$textoInvertido) return "<p>PALÍNDROMO</p>";
     else return "<p>NO ES PALÍNDROMO</p>";
 
 }
 
-function palindromoComprimido($texto) {
-    if (str_replace(" ","",strtolower($texto))==strrev(str_replace(" ","",strtolower($texto)))) return "<p>PALÍNDROMO</p>";
-    else return "<p>NO ES PALÍNDROMO</p>";
-}
 
 function bisiesto($numero){
     if ($numero%4==0 && ($numero%100!=0 || $numero%400==0)) 

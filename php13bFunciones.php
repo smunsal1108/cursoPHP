@@ -9,10 +9,25 @@ print_r ($array2);
 echo "</pre>";
 
 
-/* 
-function primeraMayusc ($array){
-    return ucwords($array);
-}
- */
+$carrito = [
+    ["producto" => "Libro", "precio" => 23],
+    ["producto" => "Lápiz", "precio" => 1.2],
+    ["producto" => "Cuaderno", "precio" => 4.5]
+];
+$total = array_reduce(
+    $carrito, 
+    function($acumulador, $registro) {
+        return $acumulador + $registro["precio"];
+    },
+    0);
 
+echo $total;
+echo "<hr>";
+## array_reduce() hace lo mismo pero en estilo funcional ##
+$total = 0;
+
+foreach ($carrito as $item) {
+    $total += $item["precio"];
+}
+echo $total;
 ?>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="es">
 
 <head>
@@ -40,7 +40,7 @@
 
     /*range*/
     print("<h2>RANGE</h2>");
-    $valores = range(5, 43, 16);
+    $valores = range(5, 43, 2);
     print_r("<pre>");
     print_r($valores);
     print_r("</pre>");
@@ -108,6 +108,14 @@
         print "<p>$random: Encontrado en la posición $posicion.</p>";
     }  else print "$random: No encontrado.</p>";
 
+    $nombres = ["Paco", "Luis", "Carmen"];
+    $encontrado = array_search("Luis", $nombres);
+    if ($encontrado) {
+        $posicion = $encontrado +1 ;
+        echo "Encontrado en la posición $encontrado que ocupa el sitio $posicion";
+    } else { echo "No encontrado";}
+
+
 
     /* arraykeys*/
     print("<h2>ARRAY_KEYS</h2>");
@@ -131,6 +139,16 @@
     $indices = array_keys($valores);
     print "<pre>"; print_r($indices); print "</pre>";
     echo "Si sólo se indica el array devolverá un nuevo array que contiene todas las claves del array original.";
+
+    $ficha_personal =[
+        "nombre" => "Casimiro",
+        "apellidos"=> "Ynoteveo Pi",
+        "edad" => 44,
+        "ciudad"=> "Cádiz"
+    ];
+    print "<pre>"; print_r($ficha_personal); print "</pre>";
+    $titulos = array_keys($ficha_personal);
+    print "<pre>"; print_r($titulos); print "</pre>";
 
 
     /* array_values*/
@@ -196,16 +214,29 @@
         return $numero % 2 == 0; // Sólo deja los números pares
     }
     );
+  //$resultado = array_filter($numeros, fn($numero) => $numero % 2 == 0; // Sólo deja los números pares
 
     echo "<pre>";
     print_r($resultado);
     echo "</pre>";
 
     $registros =[
-        ["nombre" => "Ana", "edad" => 17],
-        ["nombre" => "Casimiro", "edad" => 56],
-        ["nombre" => "Lucas", "edad" => 15],
-        ["nombre" => "Raquel", "edad" => 43]
+        [
+            "nombre" => "Ana", 
+            "edad" => 17
+        ],
+        [
+            "nombre" => "Casimiro", 
+            "edad" => 56
+        ],
+        [
+            "nombre" => "Lucas", 
+            "edad" => 15
+        ],
+        [
+            "nombre" => "Raquel", 
+            "edad" => 43
+        ]
     ];
     echo "<pre>";
     print_r($registros);
@@ -232,7 +263,7 @@
 ];
     print("<h2>ARRAY_FILTER con parámetros array, función y ARRAY_FILTER_USE_KEY</h2>");
     $resultado = array_filter($datos, function($clave) {
-        return $clave != "a"; // Excluir la clave 'x'
+        return $clave != "a"; // Excluir la clave 'a'
     }, ARRAY_FILTER_USE_KEY);
     echo "<pre>";
     print_r($resultado);

@@ -26,12 +26,9 @@
  echo "<hr>";
  $desempleado = false;
 echo "*$desempleado*";
-if ($desempleado) {
+if ($desempleado) 
     echo "DESEMPLEADO";
-}
-else {
-    echo "NO DESEMPLEDO";
-}
+else echo "NO DESEMPLEDO";
 $comprobacion = (3-7)<4;
 echo "*$comprobacion*";
 
@@ -42,39 +39,42 @@ echo "<hr>";
     echo ("<hr>");
     $variable = true;
     echo gettype($variable)." ";
-    $variable = (string) $variable; //settype($variable,"integer");
+    $variable = (string) $variable; //settype($variable,"string");
     echo gettype($variable)." ";
     echo "$variable ";
 //
     echo ("<hr>");
     $variable = "Mortadelo";
-    echo gettype($variable)." ";
-    $variable = (array) $variable; // un array con una posición que vale "Casimiro" $variable[0]
+    echo gettype($variable)." "; 
+    $variable = (array) $variable; // un array con una posición que vale "Mortadelo" $variable[0]
+    echo $variable[0];
     echo gettype($variable)." ";
     $variable[1]="Filemón";
-    $variable[2]="Dr. Bacterio";
-    
+    $variable[]="Dr. Bacterio"; // si no se indica índice, se añade al final.
+
     echo nl2br("\n");
     echo "$variable[0] y $variable[1]";
     $nuevo ="";
     foreach($variable as $nombre){
         $nuevo = $nuevo.$nombre;
     }
-    
+    echo "<p>$nuevo</p>";
+
+
     echo "<ul>";
-    foreach ($variable as $nombre) {
+    foreach($variable as $nombre){
         echo "<li>$nombre</li>";
     }
     echo "</ul>";
 
-    echo "<p>$nuevo</p>";
+
+
     $variable = (string) $variable[0];
     echo $variable;
 
 
     echo "<hr>";
-    echo "*".false."*";
-
+    echo "*".true."*";
     ?>
 </body>
 </html>

@@ -15,16 +15,19 @@ function login($usuario, $clave) {
 }
 
 
-
 $resultado = login("pepito56", "rt980");
 // Desestructuración asociativa 
 ["estado" => $estado, "mensaje" => $mensaje] = $resultado;
 echo $mensaje;
 
-
+// puede usarse un foreach
 foreach ($resultado as $dato){
     echo "<p>$dato</p>";
 }
 echo "<p>{$resultado["mensaje"]}</p>";
 echo "<p>$mensaje</p>";
+
+
+
+
 ?>

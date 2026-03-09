@@ -3,8 +3,7 @@ include("externo.php");
 
 
 ///////
-echo "Resultado:".palindromo("sara BARAS");
-echo palindromoComprimido("dabale");
+echo "Resultado:".palindromo("sara BÁRAS!");
 
 
     

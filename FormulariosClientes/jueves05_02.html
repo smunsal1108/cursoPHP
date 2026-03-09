@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+
+<body>
+    <h1>Formulario inicial</h1>
+    <form action="jueves05_2.php" method="post" enctype="multipart/form-data">
+        <input type="hidden" name="opcion" value="1">
+        <div>
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" required placeholder="Escribe tu nombre" title="Escribe tu nombre">
+        </div>
+        <div>
+            <label for="apellidos">Apellidos</label>
+            <input type="text" id="apellidos" name="apellidos">
+        </div>
+        <div>
+            <label for="clave">Clave</label>
+            <input type="password" id="clave" name="clave" required>
+        </div>
+        <div>
+            <label for="fecha">Fecha</label>
+            <input type="date" id="fecha" name="fecha">
+        </div>
+        <div>
+            <label for="fichero">Fichero</label>
+            <input type="file" id="fichero" name="fichero[]" multiple>
+        </div>
+        <div>
+            <select name="marcas[]" multiple>
+                <option disabled selected>Elija una marca</option>
+                <option value="SEAT">SEAT</option>
+                <option value="FIAT">FIAT</option>
+                <option value="Mercedes">MERCEDES-BENZ</option>
+                <option value="Ford">FORD</option>
+            </select>
+        </div>
+        <div>
+            <input type="radio" value="Sevilla" id="Sevilla" name="ciudad">
+            <label for="Sevilla">Sevilla</label>
+            <input type="radio" value="Málaga" id="Málaga" name="ciudad">
+            <label for="Málaga">Málaga</label>
+            <input type="radio" value="Córdoba" id="Córdoba" name="ciudad">
+            <label for="Córdoba">Córdoba</label>
+        </div>
+        <div>
+            <input type="checkbox" value="Nervión" name="distritos[]" id="Nervión">
+            <label for="Nervión">Nervión</label>
+            <input type="checkbox" value="Macarena" name="distritos[]" id="Macarena">
+            <label for="Macarena">Macarena</label>
+            <input type="checkbox" value="Cerro-Amate" name="distritos[]" id="Cerro-Amate">
+            <label for="Cerro-Amate">Cerro-Amate</label>
+            <input type="checkbox" value="Triana" name="distritos[]" id="Triana">
+            <label for="Triana">Triana</label>
+        </div>
+        <div>
+            <label for="observaciones">Observaciones</label>
+            <textarea id="observaciones" name="observaciones" cols="20" rows="4"></textarea>
+        </div>
+        <div>
+            <label for="color">Color</label>
+            <input type="color" id="color" name="color">
+        </div>
+        <input type="submit" value="ENVIAR">
+        <input type="reset" value="BORRAR">
+    </form>
+</body>
+
+</html>

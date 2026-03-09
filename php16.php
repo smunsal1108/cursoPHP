@@ -1,7 +1,9 @@
 <?php
+require_once "jueves26_externo.php";
+mb_internal_encoding("UTF-8");
 echo "<h2>Análisis y transformaciones de cadena</h2>";
 
-$cadena = "La vida es bella.";
+$cadena = "¡La vida es bella!";
 
 // --- Conteos usando expresiones regulares ---
 $vocales = preg_match_all('/[aeiouáéíóú]/iu', $cadena);
@@ -14,7 +16,7 @@ $mayusculas = mb_strtoupper($cadena);
 $minusculas = mb_strtolower($cadena);
 $capitalizada = ucwords($cadena);
 
-$invertida = strrev($cadena);
+$invertida = invertir_cadena($cadena);
 // --- Reemplazo de palabra ---
 $cadenaReemplazada = str_replace("bella", "hermosa", $cadena);
 $cadenaLimpia = "sará baras";
@@ -37,7 +39,7 @@ foreach($conversion as $conTilde => $sinTilde){
 $cadenaLimpia = preg_replace('/[^a-z]/iu', '', mb_strtolower($cadenaLimpia));
 
 
-$esPalindromo = ($cadenaLimpia == strrev($cadenaLimpia)) ? true : false;
+$esPalindromo = ($cadenaLimpia == invertir_cadena($cadenaLimpia)) ? true : false;
 
 // --- Mostrar resultados ---
 echo "<p>Cadena original: $cadena</p>";
@@ -49,7 +51,8 @@ echo "<p>Dígitos: $digitos</p>";
 echo "<p>Mayúsculas: $mayusculas</p>";
 echo "<p>Minúsculas: $minusculas</p>";
 echo "<p>Capitalizada: $capitalizada</p>";
-echo "<p>Cadena invertida: $invertida</p>";
+echo "<p>Cadena invertida1: $invertida</p>";
+echo "<p>Cadena invertida2: ".invertir_cadena($cadena)."</p>";
 echo "<p>Después del reemplazo: $cadenaReemplazada</p>";
 echo "<p>Palíndromo: " . ($esPalindromo ? "Sí" : "No") . "</p>";
 

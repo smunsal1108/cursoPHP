@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario 17a</title>
+</head>
+
+<body>
+    <form action="php17aResultados.php" method="post">
+        <fieldset><legend>Datos personales</legend>
+        <div>
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre" required>
+            <label for="apellidos">Apellidos</label>
+            <input type="text" name="apellidos" id="apellidos" required>
+        </div>
+        <label for="clave">Clave</label>
+        <input type="password" name="clave" id="clave" required>
+        <label for="correo">Correo electrónico</label>
+        <input type="mail" name="correo" id="correo" pattern="[a-zA-Z0-9._\-]+@[a-zA-Z0-9.]+\.[a-zA-Z]{2,}">
+    </fieldset>
+        <label for="fichero">Fichero adjunto</label>
+        <input type="file" name="fichero" id="fichero">
+        <label for="color">Color elegido</label>
+        <input type="color" name="color" id="color">
+        <label for="numero">Número de hijos</label>
+        <input type="number" name="numero" id="numero" min="0" max="7" size="3">
+        <div>
+            <input type="radio" name="turno" value="mañana" id="mañana" required>
+            <label for="mañana">Mañana</label>
+            <input type="radio" name="turno" value="tarde" id="tarde" checked required>
+            <label for="tarde">Tarde</label>
+        </div>
+        <div>
+            <input type="checkbox" name="vehiculo1" value="coche" id="coche">
+            <label for="coche">Coche</label>
+            <input type="checkbox" name="vehiculo2" value="bicleta" id="bicicleta">
+            <label for="bicicleta">Bicicleta</label>
+        </div>
+        <div>
+            <select name="marcas[]" id="marcas" multiple>
+                <option value="ford">FORD</option>
+                <option value="seat">SEAT</option>
+                <option value="renault">Renault</option>
+            </select>
+        </div>
+        <div>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Borrrar">
+        </div>
+    </form>
+</body>
+
+</html>

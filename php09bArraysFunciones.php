@@ -67,7 +67,7 @@
     "Italia"=>"Roma"
     ];
     print "<pre>"; print_r($paises); print "</pre>";
-    sort($paises);// probar krsort() y arsort()
+    ksort($paises);// probar krsort() y arsort()
     print "<pre>"; print_r($paises); print "</pre>";
 
     ?>

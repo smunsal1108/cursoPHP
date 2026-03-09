@@ -1,0 +1,123 @@
+/* Reset básico */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+/* Fondo general */
+body{
+background:linear-gradient(135deg,#1e3c72,#2a5298);
+min-height:100vh;
+display:flex;
+flex-direction:column;
+align-items:center;
+padding:40px;
+color:#333;
+}
+
+/* Título principal */
+h1{
+color:white;
+margin-bottom:30px;
+font-size:2.2em;
+text-shadow:2px 2px 5px rgba(0,0,0,0.3);
+}
+
+/* Formularios como tarjetas */
+form{
+background:white;
+padding:20px 25px;
+margin:15px;
+border-radius:12px;
+box-shadow:0 8px 18px rgba(0,0,0,0.2);
+width:350px;
+transition:transform 0.2s,box-shadow 0.2s;
+}
+
+/* efecto hover */
+form:hover{
+transform:translateY(-5px);
+box-shadow:0 12px 25px rgba(0,0,0,0.25);
+}
+
+/* fieldset */
+fieldset{
+border:none;
+}
+
+/* título del fieldset */
+legend{
+font-weight:bold;
+font-size:1.2em;
+margin-bottom:10px;
+color:#1e3c72;
+}
+
+/* párrafos */
+p{
+font-size:0.9em;
+margin-bottom:10px;
+}
+
+/* bloques */
+div{
+margin-bottom:10px;
+}
+
+/* etiquetas */
+label{
+display:block;
+font-weight:bold;
+margin-bottom:4px;
+}
+
+/* inputs */
+input[type="number"],
+input[type="password"],
+input[type="text"]{
+width:100%;
+padding:8px;
+border-radius:6px;
+border:1px solid #ccc;
+transition:border 0.2s,box-shadow 0.2s;
+}
+
+/* focus */
+input:focus{
+outline:none;
+border:1px solid #2a5298;
+box-shadow:0 0 5px rgba(42,82,152,0.4);
+}
+
+/* botones */
+input[type="submit"],
+input[type="reset"]{
+padding:8px 14px;
+border:none;
+border-radius:6px;
+cursor:pointer;
+font-weight:bold;
+margin-right:6px;
+}
+
+/* botón principal */
+input[type="submit"]{
+background:#2a5298;
+color:white;
+}
+
+/* botón borrar */
+input[type="reset"]{
+background:#ccc;
+}
+
+/* hover botones */
+input[type="submit"]:hover{
+background:#1e3c72;
+}
+
+input[type="reset"]:hover{
+background:#999;
+}
