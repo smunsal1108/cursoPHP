@@ -22,6 +22,9 @@
                 $frase = htmlspecialchars(trim(($_POST["frase"])));
                 break;
             case "5":
+                echo "<pre>";
+                print_r($_POST);
+                echo "</pre>";
                 $tabla = pintar_vacios($_POST["form"]);
                 break;
         }
@@ -62,20 +65,20 @@
             <p>Escriba dos claves iguales</p>
             <input type="hidden" name="opcion" value="2">
             <div>
-            <div>
-                <label title="Introduce una clave" for="clave1">Clave1 </label>
-                <input type="password" id="clave1" name="clave1" required value="<?=isset($clave1)?$clave1:""?>">
-            </div>
-            <div>
-                <label title="Introduce otra clave" for="clave2">Clave2 </label>
-                <input type="password" id="clave2" name="clave2" required value="<?=isset($clave2)?$clave2:""?>">
-            </div>
+                <div>
+                    <label title="Introduce una clave" for="clave1">Clave1 </label>
+                    <input type="password" id="clave1" name="clave1" required value="<?=isset($clave1)?$clave1:""?>">
+                </div>
+                <div>
+                    <label title="Introduce otra clave" for="clave2">Clave2 </label>
+                    <input type="password" id="clave2" name="clave2" required value="<?=isset($clave2)?$clave2:""?>">
+                </div>
             </div>
             <div>
                 <input type="submit" value="Comprobar">
                 <input type="reset" value="Borrar">
             </div>
-            <p><?=isset($cadena1)?compararCadenas($cadena1,$cadena2):""?></p>
+            <p><?=isset($clave1)?compararCadenas($clave1,$clave2):""?></p>
             </fieldset>
         </form>
         <form action="" method="post">

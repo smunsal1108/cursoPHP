@@ -2,9 +2,15 @@
     require_once "libreriaFormularios.php";
     if ($_SERVER["REQUEST_METHOD"]=="POST"){
         $campos=explode(",",$_POST["campos"]);
+        echo "<pre>"; 
+        print_r($campos);
+        echo "</pre>";
         foreach($campos as $campo){
             $datos[$campo] = $_POST[$campo] ?? null;
             }
+            echo "<pre>"; 
+            print_r($datos);
+            echo "</pre>";
     }
 ?>
     <!DOCTYPE html>

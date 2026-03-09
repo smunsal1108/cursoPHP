@@ -3,7 +3,7 @@ function pintar_vacios($array){
     echo "<table>";
     foreach($array as $clave=>$valor){
         echo "<tr><td>";
-        if (is_array($clave)) echo count($clave)!=0?$clave:""."</td></tr>";
+        if (is_array($clave)) echo count($clave)!=0?$clave:"";
         else echo $valor==""?$clave:"";
         echo "</td></tr>";
     }
@@ -80,4 +80,29 @@ function validarEntero($dato){
 function validarVacio($dato){
     return trim($dato)!=="";
 }
+
+//Creamos la función de nombre correcto (validación)
+/* function nombre_correcto($nombre) {
+    if (!empty($nombre) && strlen($nombre) <=50 && preg_match("/[A-Za-záéíóúÁÉÍÓÚñÑ]+$/iu", $nombre)) {
+        return true;
+    } else {
+        return false;
+    }
+} */
+
+//Creamos la función de edad correcta (validación)
+function edad_correcta($edad) {
+    if (!filter_var($edad, FILTER_VALIDATE_INT)) {
+        return false; 
+    } else {
+        $edad = (int) $edad;
+        if ($edad>=1 && $edad<=99) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
+
+
 ?>
