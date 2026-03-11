@@ -1,12 +1,27 @@
 [
     {
-        "id": "1",
-        "usuario": "rlopez",
-        "clave": "kla7865"
+        "id": 1,
+        "usuario": "pepe",
+        "clave": "$2y$10$RYhilYiwmrSZHwiQ0XV6eOoPb2Fyuey2sNepVsJhBKa3gN5TL8ATS"
     },
     {
-        "id": "2",
-        "usuario": "pmarina",
-        "clave": "09sd65w"
+        "id": 2,
+        "usuario": "juan",
+        "clave": "$2y$10$cO2c3OUvDqypCLrpwoqHmO06aATl4Aji4\/00rqngYAqfnOV\/Rjybe"
+    },
+    {
+        "id": 3,
+        "usuario": "mario",
+        "clave": "$2y$10$R\/zkRvZmAeOjWGCWezOw9uGY3oWqFqkQDXapIf2JnXQVmhdQdfWLq"
+    },
+    {
+        "id": 4,
+        "usuario": "javi",
+        "clave": "$2y$10$w04QYpm44ClYQJCblsQngOQCbWrPRLVcJoNYg03xOrG1vRWPT4qBa"
+    },
+    {
+        "id": 5,
+        "usuario": "dani",
+        "clave": "$2y$10$k85KkddsexvCOey1Mhf\/fOrTSIjEV8aIm96UaTo5mL.Wl\/fJ15.ES"
     }
 ]
