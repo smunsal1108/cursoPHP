@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "usuario": "juan",
+        "clave": "$2y$10$ORfcziSk.XfDrsj50kW65utxgV1dKtBR.6NE51gGVeecGv2MlOcim",
+        "nombre": "Juan Francisco",
+        "apellidos": "López Pérez",
+        "puntuacion": 123
+    },
+    {
+        "id": 4,
+        "usuario": "carlos",
+        "clave": "$2y$10$jHYItQr9O3bKIbYzsMw3dOMwlutP5wHk1nqBw88mvzCJi1IgHL6b2",
+        "nombre": "Carlos",
+        "apellidos": "Torres Sánches",
+        "puntuacion": 211
+    }
+]
