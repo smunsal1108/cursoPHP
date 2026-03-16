@@ -1,0 +1,28 @@
+[
+    {
+        "id": 2,
+        "usuario": "juan",
+        "clave": "$2y$10$C9tA0kEl\/gO0.TJxPHpQc.D1Iib6MddfuSX1z1aFRQNXHjXZZaypS"
+    },
+    {
+        "id": 3,
+        "usuario": "casimiro",
+        "clave": "$2y$10$EdztufhfgkHV.lwwuadN3.nvThqenQ3x.232yfJ77RJ1sh16g3aFy"
+    },
+    {
+        "id": 5,
+        "usuario": "carla",
+        "clave": "$2y$10$SitI.xmd5\/lxBpKxze2.4uQimvsXHRwdkij..aSNCbQsKUE.GYOmi"
+    },
+    {
+        "id": 6,
+        "usuario": "cris",
+        "clave": "$2y$10$pLdkOJYgXfR8ksXmqc9sSOCx9zN3EAVpNGr\/opNpuHCwJjhmo6YUe"
+    },
+    {
+        "id": 7,
+        "usuario": "dios",
+        "clave": "$2y$10$DFL1eNePomguT6HSP4p6f.3obo0j\/6UWhgiA\/xTyMUkWWqgzDOTka",
+        "fecha": "2026-03-16 14:19:04"
+    }
+]
