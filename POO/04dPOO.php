@@ -1,5 +1,5 @@
 <?php
-class Alumnos {
+class Alumno {
     private $nota;
 
     public function setNota($nota) {
@@ -19,7 +19,7 @@ class Alumnos {
     }
 }
 
-$alumno = new Alumnos();
+$alumno = new Alumno();
 $alumno->setNota(7);
 
 echo $alumno->getNota(); // 7

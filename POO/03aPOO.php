@@ -1,5 +1,5 @@
 <?php
-class Personas {
+class Persona {
     public $edad;
     protected $altura;
     private $nombre;
@@ -18,6 +18,6 @@ class Personas {
     }
 }
 
-$persona1 = new Personas("Casimiro", 43, 1.73);
+$persona1 = new Persona("Casimiro", 43, 1.73);
 $persona1 -> mostrar();
 ?>

@@ -1,10 +1,11 @@
 <?php
-class Personas {
+class Persona {
     protected $nombre;
+    private $apellidos;
 }
 
-class Alumno extends Personas {
-
+class Alumno extends Persona {
+    private $edad;
     public function setNombre($nombre){
         $this->nombre = $nombre;
     }
@@ -14,7 +15,7 @@ class Alumno extends Personas {
     }
 
 }
-
+$persona = new Persona()
 $alumno = new Alumno();
 
 //echo $persona->nombre = "Casimiro";// Daría error al estar encapsulado.

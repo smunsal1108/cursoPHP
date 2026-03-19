@@ -1,5 +1,5 @@
 <?php
-class Ejemplos {
+class Ejemplo {
 
     public function metodoPublico() {
         echo "<p>Método público</p>";
@@ -18,13 +18,17 @@ class Ejemplos {
         $this->metodoPublico();
         $this->metodoProtegido();
         $this->metodoPrivado();
-    }
+    }   
 }
 
-$objeto = new Ejemplos();
+$objeto = new Ejemplo();
+try {
+    $objeto -> probarInterno();
+    $objeto->metodoPublico();     // Funciona bien
+    $objeto->metodoProtegido();  // Da error al llamarlo desde fuera de la clase
+    $objeto->metodoPrivado();    // Da error al llamarlo desde fuera de la clase
+} catch (Throwable $error) {
+    echo "Error capturado: " . $error->getMessage();
+}
 
-$objeto->metodoPublico();     // Funciona bien
-
-$objeto->metodoProtegido();  // Da error
-$objeto->metodoPrivado();    // Da error
 ?>

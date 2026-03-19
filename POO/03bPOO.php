@@ -1,5 +1,5 @@
 <?php
-class Personas {
+class Persona {
    public $edad;
    protected $altura;
    private $nombre;
@@ -13,14 +13,14 @@ class Personas {
    }
 }
 
-$persona1 = new Personas("Luis", 42, 1.83);
-$persona2 = new Personas(); // usa valores por defecto
+$persona1 = new Persona("Luis", 42, 1.83);
+$persona2 = new Persona(); // usa valores por defecto
 
 $persona1->mostrar(); // Nombre: Luis, Edad: 42, Altura: 1.83
 
 $persona2->mostrar(); // Nombre: Desconocido, Edad: 0, Altura: 0
 echo "<hr>";
-$personas = [new Personas("Luis", 42, 1.83), new Personas()]; // array de objetos
+$personas = [new Persona("Luis", 42, 1.83), new Persona()]; // array de objetos
 foreach ($personas as $persona){
     $persona -> mostrar();
 }

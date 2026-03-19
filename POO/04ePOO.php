@@ -1,25 +1,23 @@
 <?php
-class Empleados {
+class Empleado {
     protected $salario;
-
     public function setSalario($salario) {
         if ($salario > 0) {
             $this->salario = $salario;
         }
     }
-
     public function getSalario() {
         return $this->salario;
     }
 }
 
-class Gerentes extends Empleados {
+class Gerente extends Empleado {
     public function aumentarSalario($cantidad) {
         $this->salario += $cantidad; // permitido (protected)
     }
 }
 
-$gerente = new Gerentes();
+$gerente = new Gerente();
 $gerente->setSalario(2000);
 $gerente->aumentarSalario(500);
 

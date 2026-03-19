@@ -1,9 +1,9 @@
 <?php
-class Cuentas {
+class Cuenta {
     public $saldo;
 }
 
-$cuenta = new Cuentas();
+$cuenta = new Cuenta();
 $cuenta->saldo = -1000; //  permitido pero muy mala práctica
 
 ?>

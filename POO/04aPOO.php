@@ -1,7 +1,7 @@
 <?php
 echo "<h1>Encapsulamiento básico y alternativas en el control de datos de entrada el constructor</h1>";
 echo "<h2>Asignar un valor por defecto</h2>";
-class Personas {
+class Persona {
     private $nombre;
 
     public function __construct($nombre) {
@@ -23,7 +23,7 @@ class Personas {
     }
 }
 
-$persona = new Personas(""); // Pruébese con una cadena no vacía al iniciarlo
+$persona = new Persona(""); // Pruébese con una cadena no vacía al iniciarlo
 
 
 // Esto daría error:
@@ -39,7 +39,7 @@ echo $persona->getNombre()."<==="; //
 
 
 echo "<h2>Lanzar una excepción</h2>";
-class Individuos {
+class Individuo {
     private $nombre;
 
     public function __construct($nombre) {
@@ -80,7 +80,7 @@ try {
 
 
 echo "<h2>Reutilizar el <code>setter</code></h2>";
-class Alumnos {
+class Alumno {
     private $nombre;
 
     public function __construct($nombre) {
@@ -99,7 +99,7 @@ class Alumnos {
         return $this->nombre;
     }
 }
-$alumno = new Alumnos(""); // Pruébese con una cadena no vacía al iniciarlo
+$alumno = new Alumno(""); // Pruébese con una cadena no vacía al iniciarlo
 
 
 // Esto daría error:

@@ -1,5 +1,5 @@
 <?php
-class CuentasBancarias {
+class CuentaBancaria {
     private $saldo;
 
     public function __construct($saldoInicial) {
@@ -25,7 +25,7 @@ class CuentasBancarias {
     }
 }
 
-$cuenta = new CuentasBancarias(100);
+$cuenta = new CuentaBancaria(100);
 
 $cuenta->ingresar(50);
 echo "<p>".$cuenta->getSaldo()."</p>"; // 150
