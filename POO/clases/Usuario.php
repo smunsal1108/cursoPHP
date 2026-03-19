@@ -1,4 +1,5 @@
 <?php
+namespace MiProyecto;
 class Usuario {
     public $nombre;
     public $edad;

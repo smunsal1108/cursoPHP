@@ -61,7 +61,7 @@ class Individuo {
 }
 
 try {
-    $individuo = new Individuos("Casimiro"); // probar con valores no vacíos
+    $individuo = new Individuo("Casimiro"); // probar con valores no vacíos
     echo $individuo->getNombre(); // 
     echo "<hr>";
     $individuo->setNombre("Ciriaco");

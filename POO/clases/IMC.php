@@ -1,0 +1,25 @@
+<?php
+namespace MiProyecto;
+class IMC {
+    private $nombre;
+    private $peso;
+    private $altura;
+
+    public function __construct($nombre, $peso, $altura) {
+        $this -> nombre = $nombre;
+        $this -> peso = $peso;
+        $this -> altura = $altura / 100;
+    }
+
+    public function calculo_IMC() {
+        /* imc = peso / altura^2 */
+        return $this->peso / ($this->altura ** 2);
+    }
+
+    public function mostrar_resultado() {
+        $imc = round($this -> calculo_IMC(), 2);
+        return $this -> nombre." tienes un IMC = ".$imc;
+    }
+}
+
+?>
