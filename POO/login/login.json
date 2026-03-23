@@ -1,0 +1,9 @@
+[
+    {
+        "usuario": "admin",
+        "clave": "$2y$10$I9H25J0MDuS8FdEQwrhe5uEEV.2y6/n4ROFZLS2TtZOlLKhgersJa"
+    },
+    {   "usuario": "juan",
+            "clave": "$2y$10$.95TRaXUn4AAqEsyBbiseefGnY7ECPMz396e0ERdZyxEQZKqKz2CO"
+        }
+    ]

@@ -6,7 +6,7 @@
         public function __construct($nombre, $peso, $altura){
             $this -> nombre = $nombre;
             $this -> peso = $peso;
-            $this -> altura = $altura;
+            $this -> altura = $altura/100;
         }
 
         public function calculo_IMC(){
@@ -19,7 +19,7 @@
         }
     }
 
-$cliente1 = new IMC("Casimiro", 67, 1.77);
+$cliente1 = new IMC("Casimiro", 67, 177);
 
 echo $cliente1 -> mostrar_resultado();
 ?>
